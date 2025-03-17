@@ -1,0 +1,425 @@
+.funlab-in-game {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: flex-start;
+  gap: 50px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 1.0);
+  background: linear-gradient(
+    180deg,
+    rgba(18, 43, 79, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.funlab-in-game .header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: transparent;
+}
+
+.funlab-in-game .EQUIPE-ACTUELLE {
+  justify-content: center;
+  padding: 10px 0px;
+  background-color: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.funlab-in-game .text-wrapper {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: var(--title-font-family);
+  font-weight: var(--title-font-weight);
+  color: #ffffff;
+  font-size: var(--title-font-size);
+  text-align: center;
+  letter-spacing: var(--title-letter-spacing);
+  line-height: var(--title-line-height);
+  white-space: nowrap;
+  font-style: var(--title-font-style);
+}
+
+.funlab-in-game .EQUIPE-ATTENDU {
+  background-color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.funlab-in-game .div {
+  position: relative;
+  width: 100%;
+  margin-top: -1.00px;
+  font-family: "Zekton-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 25px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.funlab-in-game .body {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0px 50px;
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.funlab-in-game .game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+.funlab-in-game .title {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 0px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.funlab-in-game .text-wrapper-2 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Zekton-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.funlab-in-game .image-in-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 0px 100px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.funlab-in-game .bb {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  height: 251.67px;
+  object-fit: cover;
+}
+
+.funlab-in-game .logo {
+  position: relative;
+  width: 124px;
+  height: 124px;
+}
+
+.funlab-in-game .leaderboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+.funlab-in-game .leader-board {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 0px 20px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.funlab-in-game .TITLE {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 0px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.funlab-in-game .LEADERBOARD {
+  position: relative;
+  width: 416px;
+  margin-top: -1.00px;
+  font-family: "Oxanium-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.funlab-in-game .TABLE {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.funlab-in-game .leaderboard-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.funlab-in-game .frame {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.funlab-in-game .solar-ranking-bold {
+  position: relative;
+  width: 45px;
+  height: 45px;
+}
+
+.funlab-in-game .text-wrapper-3 {
+  position: relative;
+  width: fit-content;
+  font-family: "Oxanium-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.funlab-in-game .text-wrapper-4 {
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+  font-family: "Oxanium-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.funlab-in-game .footer {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 50px;
+  padding: 10px;
+  position: relative;
+  background-color: transparent;
+}
+
+.funlab-in-game .RS {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.funlab-in-game .img {
+  position: relative;
+  width: 12px;
+  height: 12px;
+}
+
+.funlab-in-game .RS-2 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: var(--text-font-family);
+  font-weight: var(--text-font-weight);
+  color: #ffffff;
+  font-size: var(--text-font-size);
+  text-align: center;
+  letter-spacing: var(--text-letter-spacing);
+  line-height: var(--text-line-height);
+  white-space: nowrap;
+  font-style: var(--text-font-style);
+}
+/* Original CSS code */
+
+/* Additional CSS for improved accessibility and semantics */
+.funlab-in-game {
+  min-width: 320px;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.EQUIPE-ACTUELLE,
+.EQUIPE-ATTENDU {
+  padding: 15px 0;
+}
+
+.body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.game {
+  flex-basis: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.image-in-game {
+  max-width: 100%;
+  height: auto;
+}
+
+.bb {
+  max-width: 100%;
+  height: auto;
+}
+
+.logo {
+  margin: 20px auto;
+}
+
+.leaderboard {
+  flex-basis: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.TABLE {
+  list-style-type: none;
+  padding: 0;
+}
+
+.leaderboard-row {
+  margin-bottom: 10px;
+}
+
+.footer {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px 10px;
+}
+
+.RS {
+  margin: 5px 10px;
+}
+
+.RS-2 {
+  transition: color 0.3s ease;
+}
+
+.RS-2:hover,
+.RS-2:focus {
+  color: var(--secondary);
+}
+
+@media screen and (max-width: 768px) {
+  .funlab-in-game {
+    gap: 30px;
+  }
+
+  .body {
+    padding: 0 20px;
+  }
+
+  .LEADERBOARD {
+    font-size: 28px;
+  }
+
+  .text-wrapper-3,
+  .text-wrapper-4 {
+    font-size: 24px;
+  }
+
+  .footer {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .funlab-in-game {
+    gap: 20px;
+  }
+
+  .text-wrapper,
+  .div {
+    font-size: 18px;
+  }
+
+  .text-wrapper-2 {
+    font-size: 24px;
+  }
+
+  .LEADERBOARD {
+    font-size: 24px;
+  }
+
+  .text-wrapper-3,
+  .text-wrapper-4 {
+    font-size: 20px;
+  }
+
+  .RS-2 {
+    font-size: 10px;
+  }
+}

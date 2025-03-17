@@ -1,0 +1,51 @@
+[
+  {
+    "id": 0,
+    "squadName": "Alpha Squad",
+    "beginDate": "2025-03-17T08:30:00",
+    "endDate": "2025-03-17T10:30:00",
+    "bookingName": "John Doe"
+  },
+  {
+    "id": 1,
+    "squadName": "Alpha Squad",
+    "beginDate": "2025-03-17T08:30:00",
+    "endDate": "2025-03-17T10:30:00",
+    "bookingName": "John Doe"
+  },
+  {
+    "id": 2,
+    "squadName": "Alpha Squad",
+    "beginDate": "2025-03-17T08:30:00",
+    "endDate": "2025-03-17T10:30:00",
+    "bookingName": "John Doe"
+  },
+  {
+    "id": 3,
+    "squadName": "Alpha Squad",
+    "beginDate": "2025-03-17T08:30:00",
+    "endDate": "2025-03-17T10:30:00",
+    "bookingName": "John Doe"
+  },
+  {
+    "id": 4,
+    "squadName": "Alpha Squad",
+    "beginDate": "2025-03-17T08:30:00",
+    "endDate": "2025-03-17T10:30:00",
+    "bookingName": "John Doe"
+  },
+  {
+    "id": 5,
+    "squadName": "Alpha Squad",
+    "beginDate": "2025-03-17T08:30:00",
+    "endDate": "2025-03-17T10:30:00",
+    "bookingName": "John Doe"
+  },
+  {
+    "id": 6,
+    "squadName": "Alpha Squad",
+    "beginDate": "2025-03-17T08:30:00",
+    "endDate": "2025-03-17T10:30:00",
+    "bookingName": "John Doe"
+  }
+]

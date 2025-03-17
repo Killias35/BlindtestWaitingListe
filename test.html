@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Fetch API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #response {
+            width: 100%;
+            height: 150px;
+            margin-top: 20px;
+            font-family: monospace;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Test de la requête Fetch</h1>
+
+    <button id="sendRequest">Envoyer la requête POST</button>
+    <button id="getData">Récupérer les données</button>
+    <button id="resetData">Réinitialiser les données</button>
+
+    <div id="response"></div>
+
+    <script>
+        // Envoi de la requête POST
+        document.getElementById('sendRequest').addEventListener('click', () => {
+            fetch('http://localhost:3000/add', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    id: 1,
+                    squadName: "Alpha Squad",
+                    beginDate: "2025-03-17T08:30:00",
+                    endDate: "2025-03-17T10:30:00",
+                    bookingName: "John Doe"
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Données mises à jour :", data);
+                document.getElementById('response').textContent = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                console.error("Erreur :", error);
+                document.getElementById('response').textContent = "Erreur : " + error;
+            });
+        });
+
+        // Envoi de la requête GET pour récupérer les données
+        document.getElementById('getData').addEventListener('click', () => {
+            fetch('http://localhost:3000/data', {
+                method: 'GET',
+                headers: { 'Content-Type': 'application/json' }
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Données récupérées :", data);
+                document.getElementById('response').textContent = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                console.error("Erreur :", error);
+                document.getElementById('response').textContent = "Erreur : " + error;
+            });
+        });
+
+        // Envoi de la requête POST pour réinitialiser les données
+        document.getElementById('resetData').addEventListener('click', () => {
+            fetch('http://localhost:3000/reset', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' }
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Données réinitialisées :", data);
+                document.getElementById('response').textContent = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                console.error("Erreur :", error);
+                document.getElementById('response').textContent = "Erreur : " + error;
+            });
+        });
+    </script>
+
+</body>
+</html>
