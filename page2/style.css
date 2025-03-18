@@ -1,0 +1,348 @@
+.funlab-waiting-game {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: flex-start;
+    gap: 50px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 1.0);
+    background: linear-gradient(
+      180deg,
+      rgba(18, 43, 79, 1) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
+  
+  .funlab-waiting-game .header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+    background-color: transparent;
+  }
+  
+  .funlab-waiting-game .EQUIPE-ACTUELLE {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+    background-color: var(--bg-secondary);
+  }
+  
+  .funlab-waiting-game .text-wrapper {
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: "Zekton-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 50px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .funlab-waiting-game .body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 100px 0px 75px;
+    position: relative;
+    flex: 1;
+    align-self: stretch;
+    width: 100%;
+    flex-grow: 1;
+  }
+  
+  .funlab-waiting-game .group {
+    position: relative;
+    width: 542px;
+    height: 529px;
+  }
+  
+  .funlab-waiting-game .overlap {
+    position: relative;
+    width: 540px;
+    height: 529px;
+  }
+  
+  .funlab-waiting-game .progressbar {
+    position: absolute;
+    width: 540px;
+    height: 529px;
+    top: 0;
+    left: 0;
+  }
+  
+  .funlab-waiting-game .overlap-group {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    top: 40px;
+    left: 45px;
+    background-image: url(./img/total.svg);
+    background-size: 100% 100%;
+  }
+  
+  .funlab-waiting-game .value {
+    position: absolute;
+    width: 281px;
+    height: 450px;
+    top: 0;
+    left: 169px;
+  }
+  
+  .funlab-waiting-game .LE-QUIZZ-COMMENCE {
+    text-align: center;
+    font-family: "Oxanium-Regular", Helvetica;
+    color: #ffffff;
+    font-size: 36px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .funlab-waiting-game .logo {
+    position: relative;
+    width: 409px;
+    height: 408.06px;
+  }
+  
+  .funlab-waiting-game .footer {
+    display: flex;
+    width: 1366px;
+    height: 50px;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 50px;
+    padding: 10px;
+    position: relative;
+    background-color: transparent;
+  }
+  
+  .funlab-waiting-game .RS {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+  .funlab-waiting-game .img {
+    position: relative;
+    width: 12px;
+    height: 12px;
+  }
+  
+  .funlab-waiting-game .div {
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: var(--text-font-family);
+    font-weight: var(--text-font-weight);
+    color: #ffffff;
+    font-size: var(--text-font-size);
+    text-align: center;
+    letter-spacing: var(--text-letter-spacing);
+    line-height: var(--text-line-height);
+    white-space: nowrap;
+    font-style: var(--text-font-style);
+  }
+  /* Inject original CSS here */
+  
+  /* Additional styles and modifications */
+  .funlab-waiting-game {
+    min-height: 100vh;
+  }
+  
+  .header {
+    padding: 20px 0;
+  }
+  
+  .EQUIPE-ACTUELLE {
+    margin: 0;
+  }
+  
+  .body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px 0 75px;
+    flex: 1;
+  }
+  
+  .progressbar {
+    position: relative;
+    width: 450px;
+    height: 450px;
+  }
+  
+  .LE-QUIZZ-COMMENCE {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+  }
+  
+  .footer {
+    padding: 10px 0;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .RS a {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .RS a:hover,
+  .RS a:focus {
+    opacity: 0.8;
+  }
+  
+  .RS .img {
+    margin-right: 5px;
+  }
+  
+  @media (max-width: 1366px) {
+    .funlab-waiting-game {
+      gap: 30px;
+    }
+  
+    .body {
+      padding: 0 50px;
+    }
+  
+    .group,
+    .logo {
+      transform: scale(0.9);
+    }
+  
+    .footer {
+      width: 100%;
+    }
+  
+    .social-links {
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .text-wrapper {
+      font-size: 36px;
+    }
+  
+    .body {
+      flex-direction: column;
+      padding: 0 20px;
+    }
+  
+    .group,
+    .logo {
+      transform: scale(0.8);
+    }
+  
+    .LE-QUIZZ-COMMENCE {
+      font-size: 28px;
+    }
+  
+    .social-links {
+      gap: 20px;
+    }
+  }
+  .progress-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+svg {
+    transform: rotate(-90deg);
+}
+
+.progress-circle {
+    fill: none;
+    stroke: #4CAF50;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1s linear;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+}
+/* Style pour le conteneur du SVG et du texte */
+.progress-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;  /* Centre horizontalement */
+    align-items: center;      /* Centre verticalement */
+    position: relative;
+    border-radius: 50%; /* Cercle autour du conteneur */
+    /* Aucune couleur de fond, on enlève background-color */
+  }
+  
+  /* Style pour le texte à l'intérieur du cercle */
+  .text-container {
+    display: flex;
+    justify-content: center;  /* Centre horizontalement */
+    align-items:center;      /* Centre verticalement */
+    width: 100%;
+    height: 50%;
+    position: absolute;       /* Permet au texte de se placer au centre du SVG */
+    color: #333;              /* Couleur du texte */
+    font-size: 16px;          /* Taille de la police */
+    font-weight: bold;        /* Poids de la police */
+    text-align: center;       /* Centre le texte à l'intérieur de la div */
+    z-index: 2;               /* S'assure que le texte est au-dessus du SVG */
+  }
+  
+  /* Personnalisation du SVG et des cercles */
+  .progress-svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg); /* Pour démarrer la progression de haut en bas */
+  }
+  
+  .progress-ring-background {
+    stroke: none;            /* Couleur de fond de la barre de progression */
+    stroke-width: 5;
+    fill: none;
+  }
+  
+  .progress-ring {
+    stroke: #4caf50;         /* Couleur de la progression */
+    stroke-width: 5;
+    fill: none;
+    stroke-dasharray: 282.743; /* Circonférence du cercle */
+    stroke-dashoffset: 0;      /* Position initiale de la barre de progression */
+  }
+  
