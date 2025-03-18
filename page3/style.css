@@ -181,6 +181,22 @@
   text-decoration: underline;
 }
 
+.data-item {
+  padding: 10px;
+  margin: 5px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+}
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ddd;
+  margin: 5px 0;
+}
+
+
 @media (max-width: 768px) {
   .funlab-list-teams .body {
     flex-direction: column;

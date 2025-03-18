@@ -1,63 +1,50 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const heures = [
-        { nom: "aaron", heure: "13:58" },
-        { nom: "bb", heure: "14:45" },
-        { nom: "george", heure: "13:53" },
-        { nom: "salam", heure: "13:55" }
-    ];
+// Fonction pour récupérer et afficher les données toutes les 3 secondes
 
-    const dates = heures.map(item => {
-        const [heures, minutes] = item.heure.split(":").map(Number);
-        const date = new Date();
-        date.setHours(heures, minutes, 0, 0);  
-        return { date, nom: item.nom };
+function fetchData() {
+    fetch('http://localhost:3000/data', {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json' }
+    })
+    .then(response => response.json())
+    .then(data => {
+        setDatas(data);
+    })
+    .catch(error => {
+        console.error("Erreur :", error);
+        document.getElementById('response').textContent = "Erreur : " + error;
     });
-
-    const currentDate = new Date();
-
-    const datesFiltrées = dates.filter(item => item.date > currentDate);
-
-    const plusProche = datesFiltrées.reduce((min, current) => (current.date < min.date ? current : min), datesFiltrées[0]);
-
-    // Calculer la différence en millisecondes entre l'heure actuelle et la prochaine heure
-    const diffInMs = plusProche.date - currentDate;
-    const diffInMinutes = Math.round(diffInMs / (1000 * 60)); 
-
-    console.log(plusProche.nom);
-    console.log("Diff in minutes:", diffInMinutes);  
-
-    // Si l'événement commence dans moins de 5 minutes, afficher le nom de l'équipe
-    if (diffInMinutes <= 5) {
-        document.getElementById("nomEquipe").textContent = `PREPAREZ-VOUS ÉQUIPE ${plusProche.nom}`;
-        document.getElementById("loading").style.display = "none";  
-    } else {
-        window.location.href = "/home";  
-    }
-
-    updateCountdown(Math.round(diffInMs / 1000));  
-});
-
-function updateCountdown(time) {
-    const countdownElement = document.getElementById("countdown");
-    const progressRing = document.querySelector('.progress-ring'); 
-    const radius = progressRing.r.baseVal.value;
-    const circumference = 2 * Math.PI * radius;
-
-    const intervalId = setInterval(() => {
-        const minutes = Math.floor(time / 60);
-        const seconds = time % 60;
-
-        countdownElement.textContent = `${minutes} : ${seconds.toString().padStart(2, "0")}`;
-
-        // Calcul de la progression et mise à jour de stroke-dashoffset
-        const offset = circumference - (time / 300) * circumference;
-        progressRing.style.strokeDashoffset = offset;
-
-        if (time === 0) {
-            clearInterval(intervalId);
-            countdownElement.textContent = "C'est parti!";
-        } else {
-            time--;  // Décrémenter le temps
-        }
-    }, 1000);
 }
+
+function setDatas(datas) {
+    const container = document.getElementById('response');
+    container.innerHTML = ''; // Nettoie le contenu précédent
+    console.log(datas)
+    datas.slice(0, 5).forEach(data => { // Prend seulement les 5 premiers
+        const dataDiv = document.createElement('div');
+        dataDiv.classList.add('data-item'); // Ajoute une classe pour le style
+    
+        const nameParagraph = document.createElement('p');
+        nameParagraph.textContent = `Nom : ${data.squadName}`;
+    
+        const timeParagraph = document.createElement('p');
+        const beginTime = dateTohour(data.beginDate)
+        timeParagraph.textContent = `${beginTime}`;
+    
+        dataDiv.appendChild(nameParagraph);
+        dataDiv.appendChild(timeParagraph);
+        container.appendChild(dataDiv);
+    });    
+}
+
+function dateTohour(dateString) {
+    const date = new Date(dateString);
+    const hours = date.getHours().toString().padStart(2, '0'); // Ajoute un 0 si nécessaire
+    const minutes = date.getMinutes().toString().padStart(2, '0'); // Ajoute un 0 si nécessaire
+    return `${hours}:${minutes}`;
+}
+
+// Appeler fetchData toutes les 3 secondes
+setInterval(fetchData, 3000);
+
+// Appel initial pour obtenir les données immédiatement au chargement
+fetchData();
